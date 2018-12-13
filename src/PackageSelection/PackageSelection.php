@@ -761,7 +761,7 @@ class PackageSelection
 
             $config = $repository->getRepoConfig();
 
-            if (!isset($config['url']) || $config['url'] !== $url) {
+            if (!isset($config['url']) || strcasecmp($config['url'], $url) !== 0) {
                 return false;
             }
 
